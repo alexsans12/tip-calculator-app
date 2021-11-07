@@ -24,13 +24,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./design/desktop-design-empty.jpg)
 
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/tip-calculator-app-solution-with-scss-7egWK_PKx)
+- Live Site URL: [Netlify](https://alexsans-tip-calculator-app.netlify.app/)
 
 ## My process
 
@@ -41,10 +41,9 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-
+- SCSS
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Frontend Mentor - [@alexsans12](https://www.frontendmentor.io/profile/alexsans12)
+- Twitter - [@Alexsans__](https://www.twitter.com/Alexsans__)
