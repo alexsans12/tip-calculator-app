@@ -1,0 +1,149 @@
+@mixin icon-input($icon) {
+    &::before {
+        content: url($icon);
+        position: absolute;
+        top: 35%;
+        left: 20px;
+    } 
+}
+
+.section-bill {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+
+    @media screen and (min-width: 800px) {
+        width: 50%;
+        padding: 50px;
+        padding-right: 20px;
+    }
+
+    .tip-bill {
+        border: none;
+        padding: 0;
+        margin-bottom: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    
+    .tip-bill__legend {
+        margin-bottom: 10px;
+    }
+    
+    .tip-bill__title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: $Very-dark-grayish-cyan;
+        margin: 0;
+    }
+
+    .tip-bill__input-group {
+        position: relative;
+        background-color: $Very-light-grayish-cyan;
+        border-radius: 5px;
+        padding: 0;
+        text-align: right;
+        width: 100%;
+        height: 50px;
+        position: relative;
+        
+        .tip-bill__error-text {
+            position: absolute;
+            top: -25px;
+            right: 0;
+            font-size: 1rem;
+            color: $Red;
+            display: none;
+
+            &--show {
+                display: block;
+            }
+        }        
+
+        .tip-bill__input {
+            font-size: 1.4rem;
+            text-align: right;
+            font-weight: 700;
+            color: $Very-dark-cyan;
+            background-color: transparent;
+            border: none;
+            padding: 0 15px 0 0;
+            width: 100%;
+            height: 100%;
+            appearance: textfield;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            
+            &::placeholder {
+                color: $Dark-grayish-cyan;
+            }
+
+            &:focus-visible {
+                outline: none;
+                border: 2px solid $Strong-cyan;
+            }
+
+            &--error {
+                border: 2px solid $Red;
+            }
+        }
+    }
+
+    .icon-dollar {
+        @include icon-input('../images/icon-dollar.svg');
+    }
+
+    .icon-person {
+        @include icon-input('../images/icon-person.svg');
+    }
+    
+    .tip-bill__buttons-group {
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 0.5rem));
+        gap: 1rem;
+
+        @media screen and (min-width: 800px) {
+            grid-template-columns: repeat(3, calc((100% / 3) - 0.65rem));
+        }
+
+        .tip-bill__button {
+            @include bgc-button($Very-dark-cyan, $White, $Light-cyan, $Very-dark-cyan);
+
+            &--selected {
+                @include bgc-button($Strong-cyan, $Very-dark-cyan);
+            }
+        }
+
+        .tip-bill__custom-input {
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-align: right;
+            color: $Very-dark-cyan;
+            background-color: $Very-light-grayish-cyan;
+            border: 2px solid $Very-light-grayish-cyan;
+            border-radius: 5px;
+            appearance: textfield;
+            padding: 0 10px 0 0;
+            width: 100%;
+    
+            &::placeholder {
+                text-align: right;
+                color: $Very-dark-grayish-cyan;
+                font-size: 1.4rem;
+            }
+
+            &:focus-visible {
+                outline: none;
+                border: 2px solid $Strong-cyan;
+            }
+    
+            &:focus-visible {
+                outline: none;
+            }
+        }            
+    }
+
+}

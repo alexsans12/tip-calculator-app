@@ -1,0 +1,11 @@
+.header {
+    padding: 3rem 0 2rem;
+
+    @media screen and (min-width: 800px) {
+        padding: 1rem 0 2rem;
+    }
+
+    @media screen and (min-width: 1440px) {
+        padding: 1rem 0 4rem;
+    }
+}

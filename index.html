@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Frontend Mentor | Tip calculator app</title>
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/normalize.css">
-</head>
-<body>
-    <header>
-        <img src="./images/logo.svg" alt="Logo Splitter">
-    </header>
-    <main>
-        <article>
-            <div>
-                <h2>Bill</h2>
-                
-                Select Tip %
-                5%
-                10%
-                15%
-                25%
-                50%
-                Custom
-                
-                Number of People
-            </div>
-            <div>
-                Tip Amount
-                / person
-                
-                Total
-                / person
-                
-                Reset
-            </div>
-        </article>
-    </main>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <title>Frontend Mentor | Tip calculator app</title>
+        <meta name="theme-color" content="#c5e4e7" />
+        <meta property="og:site_name" content="Tip Calculator App" />
+        <meta property="og:title" content="Tip calculator app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="https://i.imgur.com/1HawVii.png" />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:width" content="1440" />
+        <meta property="og:image:height" content="800" />
+        <meta property="og:image:alt" content="Tip Calculator App Website" />
+        <meta
+            property="og:description"
+            content="This a challenge from to Frontend Mentor, It is made with HTML5, SCSS ans JS"
+        />
+        <link rel="stylesheet" href="./css/style.css" />
+        <link rel="stylesheet" href="./css/normalize.css" />
+    </head>
+    <body>
+        <header class="header">
+            <img class="header__logo" src="./images/logo.svg" alt="Logo Splitter" />
+        </header>
+        <main class="card">
+                <article class="section-bill">
+                    <fieldset class="tip-bill">
+                        <legend class="tip-bill__legend"><h2 class="tip-bill__title">Bill</h2></legend>
+                        <div class="tip-bill__input-group icon-dollar">
+                            <input class="tip-bill__input" required placeholder="0" min="0" pattern="[0-9]" id="bill-quantity" title="Just Numbers" type="number" />
+                        </div>
+                    </fieldset>
+                    <fieldset class="tip-bill">
+                        <legend class="tip-bill__legend"><h2 class="tip-bill__title">Select Tip %</h2></legend>
+                        <div class="tip-bill__buttons-group">
+                            <button class="tip-bill__button button" data-percentage="5%">5%</button>
+                            <button class="tip-bill__button button" data-percentage="10%">10%</button>
+                            <button class="tip-bill__button button" data-percentage="15%">15%</button>
+                            <button class="tip-bill__button button" data-percentage="25%">25%</button>
+                            <button class="tip-bill__button button" data-percentage="50%">50%</button>
+                            <input class="tip-bill__custom-input" id="tip-percentage" placeholder="Custom" type="number" min="0" />
+                        </div>
+                    </fieldset>
+                    <fieldset class="tip-bill">
+                        <legend class="tip-bill__legend"><h2 class="tip-bill__title">Number of People</h2></legend>
+                        <div class="tip-bill__input-group icon-person">
+                            <span class="tip-bill__error-text">Can't be zero</span>
+                            <input class="tip-bill__input" id="person-quantity" required placeholder="0" pattern="[0-9]" title="Only whole number"  type="number" />
+                        </div>
+                    </fieldset>
+                </article>
+                <article class="section-results">
+                    <div class="section-results__result">
+                        <h2 class="result__title">Tip Amount <span class="result__subtitle">/ person</span></h2>
+                        <p class="result__quantity" id="tip-amount">$0.00</p>
+                    </div>
+                    <div class="section-results__result">
+                        <h2 class="result__title">Total <span class="result__subtitle">/ person</span></h2>
+                        <p class="result__quantity" id="person-amount">$0.00</p>
+                    </div>
+                    <button class="section-results__button section-results__button--disabled button" disabled>Reset</button>
+                </article>
+        </main>
+        <script src="./js/app.js"></script>
+    </body>
 </html>
